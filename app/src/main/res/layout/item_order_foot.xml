@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/interval_6dp">
+
+    <TextView
+        android:id="@+id/tv_count_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|end"
+        android:paddingBottom="@dimen/interval_6dp"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:textColor="@color/black_333"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <View
+        android:id="@+id/view_blank"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_0.5dp"
+        android:layout_below="@id/tv_count_price"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:background="@color/white_dd" />
+
+    <TextView
+        android:id="@+id/tv_operation_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/view_blank"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/interval_6dp"
+        android:background="@drawable/bg_order_foot"
+        android:textColor="@color/red_d71827"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:id="@+id/tv_operation_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_operation_one"
+        android:layout_marginEnd="@dimen/interval_20dp"
+        android:layout_marginRight="@dimen/interval_20dp"
+        android:layout_toLeftOf="@id/tv_operation_one"
+        android:layout_toStartOf="@id/tv_operation_one"
+        android:background="@drawable/bg_order_foot"
+        android:textColor="@color/red_d71827"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_0.5dp"
+        android:layout_below="@id/tv_operation_one"
+        android:layout_marginTop="@dimen/interval_6dp"
+        android:background="@color/white_dd" />
+</RelativeLayout>

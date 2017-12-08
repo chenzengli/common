@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="2dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/interval_10dp">
+
+        <TextView
+            android:id="@+id/tv_name_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:textColor="@color/black_333"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/tv_detail_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_phone"
+            android:layout_marginTop="@dimen/interval_10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <View
+            android:id="@+id/view_blank"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_0.5dp"
+            android:layout_below="@id/tv_detail_address"
+            android:layout_marginTop="@dimen/interval_10dp"
+            android:background="@color/white_dd" />
+
+        <CheckBox
+            android:id="@+id/cb_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_blank"
+            android:layout_marginTop="@dimen/interval_10dp"
+            android:text="@string/default_address" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_address_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cb_default"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/interval_10dp"
+            android:layout_marginRight="@dimen/interval_10dp"
+            card_view:srcCompat="@drawable/ic_delete_black_20dp" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/iv_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/cb_default"
+            android:layout_marginEnd="@dimen/interval_20dp"
+            android:layout_marginRight="@dimen/interval_20dp"
+            android:layout_toLeftOf="@id/iv_address_del"
+            android:layout_toStartOf="@id/iv_address_del"
+            card_view:srcCompat="@drawable/ic_edit_black_20dp" />
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

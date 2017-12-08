@@ -1,0 +1,170 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mc.common.mvp.address.view.BaseEditAddressFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="@drawable/bg_user_divider"
+        android:showDividers="middle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/interval_16dp"
+            android:paddingRight="@dimen/interval_16dp"
+            android:paddingBottom="@dimen/interval_6dp"
+            android:paddingTop="@dimen/interval_6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/receiver"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <com.mc.common.view.ContainsEmojiEditText
+                android:id="@+id/et_receiver_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_45dp"
+                android:background="@color/transparent"
+                android:hint="@string/receiver_hint"
+                android:maxLength="10"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/interval_16dp"
+            android:paddingRight="@dimen/interval_16dp"
+            android:paddingBottom="@dimen/interval_6dp"
+            android:paddingTop="@dimen/interval_6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cell_phone"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <EditText
+                android:id="@+id/et_receiver_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_45dp"
+                android:background="@color/transparent"
+                android:hint="@string/call_phone_hint"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_16dp"
+            android:paddingRight="@dimen/interval_16dp"
+            android:paddingBottom="@dimen/interval_6dp"
+            android:paddingTop="@dimen/interval_6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/province_city_district"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_choose_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/interval_45dp"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:hint="@string/province_city_district_hint"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingLeft="@dimen/interval_6dp"
+                android:paddingRight="@dimen/interval_6dp"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/interval_16dp"
+            android:paddingRight="@dimen/interval_16dp"
+            android:paddingBottom="@dimen/interval_6dp"
+            android:paddingTop="@dimen/interval_6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <com.mc.common.view.ContainsEmojiEditText
+                android:id="@+id/et_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:hint="@string/address_hint"
+                android:maxLength="30"
+                android:minHeight="@dimen/interval_45dp"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_default"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/interval_6dp"
+            android:paddingLeft="@dimen/interval_16dp"
+            android:paddingRight="@dimen/interval_16dp"
+            android:paddingTop="@dimen/interval_6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/set_as_default"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <Switch
+                android:id="@+id/st_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="true" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/interval_16dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/save"
+            android:textSize="@dimen/sp_16"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">common</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="receiver_address">收货地址</string>
+    <string name="cell_phone">手机号：</string>
+    <string name="receiver">收货人：</string>
+    <string name="receiver_hint">请输入收货人</string>
+    <string name="call_phone_hint">请输入手机号</string>
+    <string name="province_city_district">省市区：</string>
+    <string name="province_city_district_hint">请选择省市区</string>
+    <string name="address">详细地址：</string>
+    <string name="address_hint">请输入详细地址</string>
+    <string name="set_as_default">设为默认：</string>
+    <string name="save">保存</string>
+    <string name="name_too_short">收货人姓名过短</string>
+    <string name="phone_not_valid">手机号码不合法</string>
+    <string name="area_not_choose">收货地区未选择</string>
+    <string name="address_too_short">收货地址未填写</string>
+    <string name="default_address">默认地址</string>
+
+    <string name="empty_tip">此处空空如也~</string>
+    <string name="empty_address">暂无地址，快添加一个吧</string>
+
 </resources>

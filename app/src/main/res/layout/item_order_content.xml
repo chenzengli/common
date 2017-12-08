@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/interval_10dp"
+    android:paddingRight="@dimen/interval_10dp"
+    android:paddingTop="@dimen/interval_6dp">
+
+    <ImageView
+        android:id="@+id/iv_goods_pic"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/tv_good_name"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/interval_6dp"
+        android:layout_marginStart="@dimen/interval_6dp"
+        android:layout_toEndOf="@id/iv_goods_pic"
+        android:layout_toRightOf="@id/iv_goods_pic"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/black_333"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <TextView
+        android:id="@+id/tv_good_sku"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/tv_good_name"
+        android:layout_alignStart="@id/tv_good_name"
+        android:layout_below="@id/tv_good_name"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/gray_75"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <TextView
+        android:id="@+id/tv_good_count"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/tv_good_name"
+        android:layout_alignStart="@id/tv_good_name"
+        android:layout_below="@id/tv_good_sku"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/gray_75"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <TextView
+        android:id="@+id/tv_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignLeft="@id/tv_good_name"
+        android:layout_alignStart="@id/tv_good_name"
+        android:layout_below="@id/tv_good_count"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textColor="@color/gray_75"
+        android:textSize="@dimen/text_size_12sp" />
+
+    <TextView
+        android:id="@+id/tv_sale_return"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/tv_order_id"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/red_d71827"
+        android:gravity="center"
+        android:paddingLeft="@dimen/interval_6dp"
+        android:paddingRight="@dimen/interval_6dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_0.5dp"
+        android:layout_below="@id/iv_goods_pic"
+        android:layout_marginTop="@dimen/interval_6dp"
+        android:background="@color/white_dd" />
+
+</RelativeLayout>
