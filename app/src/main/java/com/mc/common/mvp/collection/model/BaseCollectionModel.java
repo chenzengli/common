@@ -13,7 +13,7 @@ import rx.Observable;
  * @联系人：朱世闯
  * @联系方式：zsc@micjs.com
  * @创建时间：11:43
- * @功能描述：
+ * @功能描述：关于收藏商品和店铺的model
  */
 
 public interface BaseCollectionModel<T extends BaseBean> extends BaseModel {

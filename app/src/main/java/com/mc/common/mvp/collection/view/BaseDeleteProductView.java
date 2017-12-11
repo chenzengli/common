@@ -9,7 +9,7 @@ import com.mc.common.base.BaseView;
  * @联系人：朱世闯
  * @联系方式：zsc@micjs.com
  * @创建时间：2017/12/11-15:11
- * @功能描述：
+ * @功能描述：取消收藏商品的view
  */
 
 public interface BaseDeleteProductView<E extends ApiException> extends BaseView {
@@ -20,6 +20,10 @@ public interface BaseDeleteProductView<E extends ApiException> extends BaseView 
     void hideLoading();
 
     void showErrorMsg(E msg);
+
+    void deleteGoodsSuccess(int position);
+
+    void deleteGoodsError(String info);
 
 
 }

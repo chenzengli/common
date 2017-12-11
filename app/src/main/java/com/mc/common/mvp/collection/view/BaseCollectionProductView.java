@@ -9,7 +9,7 @@ import com.mc.common.base.BaseView;
  * @联系人：朱世闯
  * @联系方式：zsc@micjs.com
  * @创建时间：11:14
- * @功能描述：
+ * @功能描述：收藏商品的view
  */
 
 public interface BaseCollectionProductView<T extends BaseView, E extends ApiException> extends BaseView {
