@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="end"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dp_10"
+    android:paddingRight="@dimen/dp_10">
+
+    <TextView
+        android:id="@+id/tv_shop_total"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:text="¥45.87"
+        android:textColor="@color/red_d71827"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_shop_settle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/interval_6dp"
+        android:layout_marginLeft="@dimen/interval_16dp"
+        android:layout_marginStart="@dimen/sp_16"
+        android:layout_marginTop="@dimen/interval_6dp"
+        android:background="@color/red_d71827"
+        android:gravity="center"
+        android:paddingLeft="@dimen/interval_20dp"
+        android:paddingRight="@dimen/interval_20dp"
+        android:text="@string/go_settle"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

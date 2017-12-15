@@ -1,0 +1,56 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_logistics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_logistics_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="运单单号：2345678234567124（点击复制）" />
+
+        <TextView
+            android:id="@+id/tv_logistics_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            android:text="承运公司：百世快递" />
+
+        <TextView
+            android:id="@+id/tv_logistics_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:padding="@dimen/dp_10"
+            android:text="快递客服：95588（点击拨号）" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_logistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

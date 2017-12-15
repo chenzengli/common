@@ -9,7 +9,6 @@ import com.chad.library.adapter.base.BaseMultiItemQuickAdapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
-import com.mc.common.R;
 import com.mc.common.base.BaseListFragment;
 
 /**
@@ -41,29 +40,29 @@ public abstract class OrderListFragment extends BaseListFragment {
     }
 
     @Override
-    public BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAddressAdapter() {
-        orderAdapter = getAdapter();
+    public final BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAdapter() {
+        orderAdapter = getOrderAdapter();
         return orderAdapter;
     }
 
     @Override
-    public void onRefresh() {
+    public final void onRefresh() {
         page = 1;
         getOrderList(page);
     }
 
     @Override
-    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+    public final void onItemClick(BaseQuickAdapter adapter, View view, int position) {
         onItemSelect(adapter, view, position, orderAdapter.getItem(position));
     }
 
     @Override
-    public void onLoadMoreRequested() {
+    public final void onLoadMoreRequested() {
         page++;
         getOrderList(page);
     }
 
-    public abstract OrderAdapter getAdapter();
+    public abstract OrderAdapter getOrderAdapter();
 
     public abstract void getOrderList(int page);
 

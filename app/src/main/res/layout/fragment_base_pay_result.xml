@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/interval_20dp">
+
+    <ImageView
+        android:id="@+id/iv_payment_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/interval_20dp"
+        android:src="@drawable/ic_payment_successful"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_payment_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/interval_20dp"
+        android:text="支付成功"
+        android:textColor="@color/red_d71827"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_results_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/interval_20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/prompt_payment_successful"
+        android:textColor="@color/black_333" />
+
+    <Button
+        android:id="@+id/btn_complete"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/interval_20dp"
+        android:background="@drawable/bg_login"
+        android:text="@string/complete"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+
+</LinearLayout>

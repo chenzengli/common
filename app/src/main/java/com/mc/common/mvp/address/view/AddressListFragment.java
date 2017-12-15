@@ -38,12 +38,6 @@ public abstract class AddressListFragment extends BaseListFragment {
         super.onCreate(savedInstanceState);
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//        return super.onCreateView(inflater, container, savedInstanceState);
-//    }
-
     @Override
     public void initEmpty(View view, TextView tvEmptyTip) {
         tvEmptyTip.setText(R.string.empty_address);
@@ -60,7 +54,7 @@ public abstract class AddressListFragment extends BaseListFragment {
     }
 
     @Override
-    public BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAddressAdapter() {
+    public BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAdapter() {
         OnChecked checked = new OnChecked();
         addressAdapter = new AddressAdapter(checked);
         return addressAdapter;
@@ -87,11 +81,6 @@ public abstract class AddressListFragment extends BaseListFragment {
                 editAddress(listBean);
                 break;
         }
-    }
-
-    @Override
-    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
-        onAddressSelected(adapter,view,position,addressAdapter.getItem(position));
     }
 
     @Override
@@ -126,5 +115,4 @@ public abstract class AddressListFragment extends BaseListFragment {
 
     public abstract void editAddress(Address.AddrListBean listBean);
 
-    public abstract void onAddressSelected(BaseQuickAdapter adapter, View view, int position, MultiItemEntity multiItemEntity);
 }

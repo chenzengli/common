@@ -15,7 +15,7 @@ import android.view.ViewGroup;
  * @version 1.0.0
  */
 
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment<T extends BasePresenter> extends Fragment {
 
     @Override
     public void onAttach(Context context) {
@@ -96,5 +96,7 @@ public abstract class BaseFragment extends Fragment {
     public abstract void initData();
 
     public abstract void addListener();
+
+    public abstract T getPresenter();
 
 }

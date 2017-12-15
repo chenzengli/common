@@ -1,0 +1,238 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_setting_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/bg_user_divider"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tv_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="我的信息"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_receiver_address"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="地址管理"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_account_sale"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="帐户安全"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/interval_45dp"
+                android:gravity="center_vertical"
+                android:text="消息推送"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <Switch
+                android:id="@+id/switch_push"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_disturb"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/interval_45dp"
+                android:gravity="center_vertical"
+                android:text="消息免打扰（23:00至次日7:00不推送）"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <Switch
+                android:id="@+id/switch_disturb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <TextView
+            android:id="@+id/tv_service_protocol"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="服务协议"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_privacy_protocol"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="隐私政策"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_above"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="关于我们"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <TextView
+            android:id="@+id/tv_help"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="使用帮助"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/tv_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:drawableRight="@drawable/ic_chevron_right_black_333"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:text="功能反馈"
+            android:textColor="@color/black_5c"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <RelativeLayout
+            android:id="@+id/layout_clear_cache"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/interval_45dp"
+                android:gravity="center_vertical"
+                android:text="清除缓存"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_clear_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_check_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_45dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/interval_45dp"
+                android:gravity="center_vertical"
+                android:text="检查更新"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_margin="@dimen/interval_10dp"
+            android:background="@drawable/bg_login"
+            android:text="@string/logout"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

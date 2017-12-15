@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author momologo
  */
 
-public abstract class OrderAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> {
+public abstract class OrderAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity,BaseViewHolder> {
 
     public static final int TYPE_HEAD = 0;
 
@@ -32,11 +32,4 @@ public abstract class OrderAdapter extends BaseMultiItemQuickAdapter<MultiItemEn
         addItemType(TYPE_CONTENT, R.layout.item_order_content);
         addItemType(TYPE_FOOTER, R.layout.item_order_foot);
     }
-
-    @Override
-    protected void convert(BaseViewHolder helper, MultiItemEntity item) {
-        onConvert(helper, item);
-    }
-
-    public abstract void onConvert(BaseViewHolder holder, MultiItemEntity itemEntity);
 }

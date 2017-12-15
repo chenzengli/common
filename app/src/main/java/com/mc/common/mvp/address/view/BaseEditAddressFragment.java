@@ -33,20 +33,20 @@ public abstract class BaseEditAddressFragment extends BaseFragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     @BindView(R.id.et_receiver_name)
-    ContainsEmojiEditText etReceiverName;
+    protected ContainsEmojiEditText etReceiverName;
     @BindView(R.id.et_receiver_phone)
-    EditText etReceiverPhone;
+    protected EditText etReceiverPhone;
     @BindView(R.id.tv_choose_area)
-    TextView tvChooseArea;
+    protected TextView tvChooseArea;
     @BindView(R.id.et_detail)
-    ContainsEmojiEditText etDetail;
+    protected ContainsEmojiEditText etDetail;
     @BindView(R.id.st_default)
-    Switch stDefault;
+    protected Switch stDefault;
     @BindView(R.id.rl_default)
-    RelativeLayout rlDefault;
+    protected RelativeLayout rlDefault;
     @BindView(R.id.btn_save)
-    Button btnSave;
-    Unbinder unbinder;
+    protected Button btnSave;
+    private Unbinder unbinder;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,34 +54,19 @@ public abstract class BaseEditAddressFragment extends BaseFragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public final View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
-    public int LayoutId() {
+    public final int LayoutId() {
         return R.layout.fragment_base_edit_address;
     }
 
     @Override
-    public void addInject(View view) {
+    public final void addInject(View view) {
         unbinder = ButterKnife.bind(this, view);
-    }
-
-    @Override
-    public void initView() {
-        initEditView(etReceiverName, etReceiverPhone, tvChooseArea, etDetail, stDefault, rlDefault, btnSave);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void addListener() {
-
     }
 
     @Override
@@ -91,7 +76,7 @@ public abstract class BaseEditAddressFragment extends BaseFragment {
     }
 
     @OnClick({R.id.tv_choose_area, R.id.btn_save})
-    public void onViewClicked(View view) {
+    public final void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_choose_area:
                 openArea();
@@ -121,8 +106,6 @@ public abstract class BaseEditAddressFragment extends BaseFragment {
                 break;
         }
     }
-
-    public abstract void initEditView(ContainsEmojiEditText etReceiverName, EditText etReceiverPhone, TextView tvChooseArea, ContainsEmojiEditText etReceiverAddress, Switch stDefault, RelativeLayout rlDefault, Button btnSave);
 
     public abstract void saveAddress(String name, String phone, String area, String address, boolean isChecked);
 

@@ -28,10 +28,10 @@ import butterknife.Unbinder;
 public abstract class BaseListFragment extends BaseFragment implements SwipeRefreshLayout.OnRefreshListener, BaseMultiItemQuickAdapter.RequestLoadMoreListener, BaseMultiItemQuickAdapter.OnItemClickListener, BaseMultiItemQuickAdapter.OnItemChildClickListener {
 
     @BindView(R.id.rv_address)
-    RecyclerView rvAddress;
+    protected RecyclerView rvContent;
     @BindView(R.id.refresh_address)
-    SwipeRefreshLayout refreshAddress;
-    Unbinder unbinder;
+    protected SwipeRefreshLayout refreshContent;
+    private Unbinder unbinder;
 
     public BaseListFragment() {
         // Required empty public constructor
@@ -49,7 +49,7 @@ public abstract class BaseListFragment extends BaseFragment implements SwipeRefr
     }
 
     @Override
-    public int LayoutId() {
+    public final int LayoutId() {
         return R.layout.fragment_base_address_list;
     }
 
@@ -60,34 +60,22 @@ public abstract class BaseListFragment extends BaseFragment implements SwipeRefr
 
     @Override
     public void initView() {
-        if (refreshEnable())
-            refreshAddress.setOnRefreshListener(this);
-        else
-            refreshAddress.setOnRefreshListener(null);
-        refreshAddress.setColorSchemeResources(android.R.color.holo_red_light, android.R.color.holo_blue_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
+        refreshContent.setOnRefreshListener(this);
+        refreshContent.setEnabled(refreshEnable());
+        refreshContent.setColorSchemeResources(android.R.color.holo_red_light, android.R.color.holo_blue_light, android.R.color.holo_orange_light, android.R.color.holo_green_light);
         LinearLayoutManager manager = new LinearLayoutManager(getActivity());
         manager.setOrientation(LinearLayoutManager.VERTICAL);
-        rvAddress.setLayoutManager(manager);
-        BaseMultiItemQuickAdapter addressAdapter = getAddressAdapter();
-        rvAddress.setAdapter(addressAdapter);
-        if (loadMoreEnable())
-            addressAdapter.setOnLoadMoreListener(this, rvAddress);
-        addressAdapter.setOnItemClickListener(this);
-        addressAdapter.setOnItemChildClickListener(this);
-        addressAdapter.setEmptyView(R.layout.empty_common);
-        addressAdapter.setHeaderAndEmpty(true);
-        TextView _emptyTip = (TextView) addressAdapter.getEmptyView().findViewById(R.id.tv_empty_tip);
-        initEmpty(addressAdapter.getEmptyView(), _emptyTip);
-    }
-
-    @Override
-    public void initData() {
-
-    }
-
-    @Override
-    public void addListener() {
-
+        rvContent.setLayoutManager(manager);
+        BaseMultiItemQuickAdapter adapter = getAdapter();
+        rvContent.setAdapter(adapter);
+        adapter.setOnLoadMoreListener(this, rvContent);
+        adapter.setEnableLoadMore(loadMoreEnable());
+        adapter.setOnItemClickListener(this);
+        adapter.setOnItemChildClickListener(this);
+        adapter.setEmptyView(R.layout.empty_common);
+        adapter.setHeaderAndEmpty(true);
+        TextView _emptyView = adapter.getEmptyView().findViewById(R.id.tv_empty_tip);
+        initEmpty(adapter.getEmptyView(), _emptyView);
     }
 
     @Override
@@ -96,11 +84,11 @@ public abstract class BaseListFragment extends BaseFragment implements SwipeRefr
         unbinder.unbind();
     }
 
-    public abstract void initEmpty(View view, TextView tvEmptyTip);
+    public abstract void initEmpty(View view, TextView tvEmptyView);
 
     public abstract boolean refreshEnable();
 
     public abstract boolean loadMoreEnable();
 
-    public abstract BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAddressAdapter();
+    public abstract BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> getAdapter();
 }
