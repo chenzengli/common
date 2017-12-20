@@ -74,4 +74,98 @@
     <string name="password_correct">两次输入的密码不相同</string>
     <!--登录注册 end-->
 
+    <!--用户信息 start-->
+    <string name="modify_picture">修改头像</string>
+    <string name="user_name">用户名</string>
+    <string name="username_not_edit">用户名不能修改呦~</string>
+    <string name="nick_name">昵称</string>
+    <string name="edit_nickname">修改昵称</string>
+    <string name="birthday">生日</string>
+    <string name="phone">手机号码</string>
+    <string name="sex">性别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="keep_secret">保密</string>
+    <string name="yes">确定</string>
+    <string name="no">取消</string>
+    <string name="cancel">取消</string>
+    <string name="hint_old_password">请输入旧密码</string>
+    <string name="old_password_null">旧密码为空</string>
+    <string name="hint_new_password">请输入新密码</string>
+    <string name="new_password_null">新密码为空</string>
+    <string name="new_password_length">新密码不能少于6位</string>
+    <string name="hint_define_password">请再输入一次</string>
+    <string name="new_define_not_equal">两次输入的密码不相同</string>
+    <string name="modify_nickname">修改昵称</string>
+    <string name="hint_modify_nickname">请填写昵称</string>
+    <string name="new_nickname_null">昵称为空</string>
+    <!--用户信息 end-->
+
+    <!--帐户安全 start-->
+    <string name="manager_phone">手机号码管理</string>
+    <string name="edit_phone">修改手机号码</string>
+    <string name="manager_login">登录密码管理</string>
+    <string name="edit_login">修改登录密码</string>
+    <string name="reset_login">找回登录密码</string>
+    <string name="manager_pay">支付密码管理</string>
+    <string name="edit_pay">修改支付密码</string>
+    <string name="reset_pay">找回支付密码</string>
+    <string name="input_pay">请输入交易密码</string>
+    <!--帐户安全 end-->
+
+    <!--购物车及确认订单 start-->
+    <string name="select_address">请选择收货地址</string>
+    <string name="invoice">发票</string>
+    <string name="personal">个人</string>
+    <string name="enterprise">企业</string>
+    <string name="shop_promotions">优惠</string>
+    <string name="integral">积分</string>
+    <string name="buyer_message_hint">选填:给卖家留言(50字以内)</string>
+    <string name="shipping_costs">运费</string>
+    <string name="discount">优惠</string>
+    <string name="defaults">默认</string>
+    <string name="goods_amount">商品合计：</string>
+    <string name="invoice_title">发票抬头</string>
+    <string name="no_need_invoice">无需发票</string>
+    <string name="hint_invoice_title">请输入发票抬头，如：企业名称</string>
+    <string name="hint_invoice_id">必填，请填写纳税人识别号</string>
+    <string name="invoice_title_null">发票抬头为空</string>
+    <string name="invoice_id_null">纳税人识别号为空</string>
+    <!--购物车及确认订单 end-->
+
+    <!--收藏start-->
+    <string name="collection_empty">暂无收藏，快去添加一些吧</string>
+    <string name="rmb">¥%s</string>
+    <string name="evaluation_and_praise" formatted="false">销量:%s&#160;|&#160;库存:%s</string>
+    <!--收藏 end-->
+
+    <!--商品详情 start-->
+    <string name="price_range">¥40</string>
+    <string name="product_satisfaction">描述相符：5.00\n质量满意：5.00</string>
+    <string name="product_model">型号</string>
+    <string name="product_color_classification">颜色分类</string>
+    <string name="product_Item_number">货号</string>
+    <string name="product_paper">纸张</string>
+    <string name="view_text_details">继续拖动，查看图文详情</string>
+    <string name="service_support">服务支持</string>
+    <string name="postage_introduction">邮费介绍</string>
+    <string name="get_points">购买可得4积分</string>
+    <string name="receive_coupons">领取优惠券</string>
+    <string name="private_chat">私聊</string>
+    <string name="collection_goods">收藏</string>
+    <string name="add_shopping_cart">加入购物车</string>
+    <string name="buy_now">立即购买</string>
+    <string name="tab_home_shop">店铺</string>
+    <string name="product_details">商品详情</string>
+    <string name="evaluate_empty">暂无评价，购买此商品记得回来评价哦</string>
+    <string name="click_to_get">点击\n领取</string>
+    <!--商品详情 end-->
+
+    <!--首页相关 start-->
+    <string name="hot_search">热门搜索</string>
+    <string name="history_search">历史记录</string>
+    <string name="clear">清除</string>
+    <string name="history_search_null">暂无历史记录</string>
+    <!--首页相关 end-->
+
 </resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_product_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/red_d71827"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <TextView
+            android:id="@+id/tb_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_18sp"/>
+    </android.support.v7.widget.Toolbar>
+
+    <com.mc.common.view.pulluploadmore.PullUpToLoadMore
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_product_top"/>
+
+        <include layout="@layout/layout_product_bottom"/>
+
+    </com.mc.common.view.pulluploadmore.PullUpToLoadMore>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/tv_product_go_shop"
+                style="@style/Shop_home_bottom"
+                android:drawableTop="@drawable/ic_go_shop_details"
+                android:text="@string/tab_home_shop"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_private_chat"
+                style="@style/Shop_home_bottom"
+                android:drawableTop="@drawable/ic_customer_service"
+                android:text="@string/private_chat"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv_product_collection"
+                style="@style/Shop_home_bottom"
+                android:drawableTop="@drawable/collection_selector"
+                android:text="@string/collection_goods"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/tv_add_shopping_cart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FA9A4D"
+                android:gravity="center"
+                android:text="@string/add_shopping_cart"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:id="@+id/tv_buy_now"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red_d71827"
+                android:gravity="center"
+                android:text="@string/buy_now"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

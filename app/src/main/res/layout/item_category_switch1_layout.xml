@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/divider_goods_gray_bottom"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_product_pic"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="@dimen/interval_10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/ic_default_pic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_marginLeft="@dimen/interval_10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/interval_10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text=""
+            android:textSize="@dimen/text_size_14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/rmb"
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:id="@+id/tv_product_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/interval_5dp"
+                android:text=""
+                android:textSize="@dimen/text_size_12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_sku_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/interval_10dp"
+                android:layout_weight="1"
+                android:ellipsize="marquee"
+                android:gravity="right|center"
+                android:text=""
+                android:textSize="@dimen/text_size_12sp"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/interval_10dp">
+
+            <TextView
+                android:id="@+id/tv_product_evaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/evaluation_and_praise"
+                android:textColor="@color/gray_c8c7cc"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_product_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_collection_normal" />
+
+                <View
+                    android:layout_width="@dimen/view_1dp"
+                    android:layout_height="@dimen/interval_20dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray_99" />
+
+                <ImageView
+                    android:id="@+id/iv_product_add_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_tabbar_cart_normal" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,294 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="60dp"
+            android:padding="@dimen/interval_10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_chevron_right_black_333"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_no_address"
+                style="@style/text_right"
+                android:text="@string/select_address" />
+
+
+            <TextView
+                android:id="@+id/tv_receiver_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/tv_default_address"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignBottom="@id/tv_receiver_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_toEndOf="@id/tv_receiver_name"
+                android:layout_toRightOf="@id/tv_receiver_name"
+                android:background="@drawable/bg_selected"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:text="@string/defaults"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                tools:ignore="RelativeOverlap" />
+
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_receiver_name"
+                android:layout_marginEnd="@dimen/interval_30dp"
+                android:layout_marginRight="@dimen/interval_30dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black_5c"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_5dp"
+            android:background="@color/white_dd" />
+        <!--发票管理-->
+        <RelativeLayout
+            android:id="@+id/rl_invoice_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/invoice"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_invoice_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_333"
+                android:text="@string/personal"
+                android:textColor="@color/gray_99"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <!--优惠券-->
+        <RelativeLayout
+            android:id="@+id/rl_shop_promotions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/shop_promotions"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_shop_promotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_333"
+                android:text=""
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_1dp"
+            android:background="@color/bg_gray" />
+        <!--积分-->
+        <RelativeLayout
+            android:id="@+id/rl_express_freight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/integral"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_points_management"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="2dp"
+                android:text=""
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <EditText
+            android:id="@+id/et_buyer_message"
+            style="@style/submit_order_edit"
+            android:hint="@string/buyer_message_hint"
+            android:maxLength="50" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/interval_6dp"
+            android:background="@color/white_dd" />
+
+        <!--商品合计-->
+        <RelativeLayout
+            android:id="@+id/rl_total_merchandise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/interval_5dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:paddingTop="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/goods_amount"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_commodity_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="2dp"
+                android:text=""
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_shipping_costs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/interval_5dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:paddingTop="@dimen/interval_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/shipping_costs"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_total_merchandise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="2dp"
+                android:text=""
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/interval_5dp"
+            android:paddingLeft="@dimen/interval_10dp"
+            android:paddingRight="@dimen/interval_10dp"
+            android:paddingTop="@dimen/interval_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/discount"
+                android:textColor="@color/black_333"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <TextView
+                android:id="@+id/tv_discount_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="2dp"
+                android:text=""
+                android:textColor="@color/red_d71827"
+                android:textSize="@dimen/text_size_14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

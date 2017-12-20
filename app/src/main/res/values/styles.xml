@@ -76,4 +76,49 @@
         <item name="android:textColor">@color/red_d71827</item>
         <item name="android:textSize">14sp</item>
     </style>
+
+    <style name="exist_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/bottom_out</item>
+    </style>
+
+    <style name="text_right">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/interval_45dp</item>
+        <item name="android:drawablePadding">@dimen/interval_6dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">@color/black_333</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:paddingLeft">@dimen/interval_10dp</item>
+        <item name="android:paddingRight">@dimen/interval_10dp</item>
+    </style>
+
+    <style name="submit_order_edit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">#ffffffff</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:lines">4</item>
+        <item name="android:paddingTop">@dimen/interval_5dp</item>
+        <item name="android:paddingBottom">@dimen/interval_5dp</item>
+        <item name="android:paddingLeft">@dimen/interval_10dp</item>
+        <item name="android:paddingRight">@dimen/interval_10dp</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/black_333</item>
+        <item name="android:textColorHint">@color/gray_92</item>
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="Shop_home_bottom">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/gray_75</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:padding">@dimen/interval_5dp</item>
+        <item name="android:background">@drawable/divider_goods_gray_semicircle</item>
+    </style>
+
 </resources>

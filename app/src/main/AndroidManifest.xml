@@ -2,15 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mc.common">
 
-    <!--极光推送 start-->
+    <!-- 极光推送 start -->
     <!-- Required -->
-    <!--  android:name="您应用的包名.permission.JPUSH_MESSAGE-->
+    <!-- android:name="您应用的包名.permission.JPUSH_MESSAGE -->
     <permission
         android:name="com.mc.common.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
     <!-- Required -->
-    <!--  <uses-permission android:name="您应用的包名.permission.JPUSH_MESSAGE" /> -->
+    <!-- <uses-permission android:name="您应用的包名.permission.JPUSH_MESSAGE" /> -->
     <uses-permission android:name="com.mc.common.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,17 +23,19 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--支付宝SDK end-->
+    <!-- 支付宝SDK end -->
 
-    <!--支付宝SDK start-->
+
+    <!-- 支付宝SDK start -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--支付宝SDK end-->
+    <!-- 支付宝SDK end -->
 
-    <!--银联支付 start-->
+
+    <!-- 银联支付 start -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -43,9 +45,10 @@
     <uses-permission android:name="android.permission.NFC" />
 
     <uses-feature android:name="android.hardware.nfc.hce" />
-    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
-    <!--银联支付 end-->
 
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+
+    <!-- 银联支付 end -->
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -61,13 +64,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.mc.common.mvp.scan.view.CaptureActivity" />
-
+        <activity android:name=".mvp.scan.view.CaptureActivity" />
         <activity android:name=".mvp.scan.view.ScanResultActivity" />
 
-        <!--极光推送 start-->
-        <!-- Required SDK 核心功能-->
+        <!-- 极光推送 start -->
+        <!-- Required SDK 核心功能 -->
         <!-- 可配置android:process参数将PushService放在其他进程中 -->
         <service
             android:name="cn.jpush.android.service.PushService"
@@ -81,14 +82,14 @@
             </intent-filter>
         </service>
 
-        <!-- since 3.0.9 Required SDK 核心功能-->
-        <!-- android:authorities="您应用的包名.DataProvider"-->
+        <!-- since 3.0.9 Required SDK 核心功能 -->
+        <!-- android:authorities="您应用的包名.DataProvider" -->
         <provider
             android:name="cn.jpush.android.service.DataProvider"
             android:authorities="com.mc.common.DataProvider"
             android:exported="true" />
 
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true">
@@ -109,7 +110,7 @@
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -119,12 +120,12 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- <category android:name="您应用的包名" />-->
+                <!-- <category android:name="您应用的包名" /> -->
                 <category android:name="com.mc.common" />
             </intent-filter>
         </activity>
 
-        <!-- SDK核心功能-->
+        <!-- SDK核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -132,38 +133,36 @@
             android:theme="@style/MyDialogStyle">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
-                <!--  <category android:name="您应用的包名" />-->
+                <!-- <category android:name="您应用的包名" /> -->
                 <category android:name="com.mc.common" />
             </intent-filter>
         </activity>
 
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <service
             android:name="cn.jpush.android.service.DownloadService"
             android:enabled="true"
-            android:exported="false">
+            android:exported="false"></service>
 
-        </service>
-
-        <!-- Required SDK核心功能-->
+        <!-- Required SDK核心功能 -->
         <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
 
         <!-- Required since 3.0.7 -->
         <!-- 新的tag/alias接口结果返回需要开发者配置一个自定的广播 -->
         <!-- 该广播需要继承JPush提供的JPushMessageReceiver类, 并如下新增一个 Intent-Filter -->
-        <!-- android:name="自定义 Receiver"-->
+        <!-- android:name="自定义 Receiver" -->
         <receiver
-            android:name="com.mc.common.push.MyReceiver"
+            android:name=".push.MyReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
-                <!--  <category android:name="您应用的包名" />-->
+                <!-- <category android:name="您应用的包名" /> -->
                 <category android:name="com.mc.common" />
             </intent-filter>
         </receiver>
 
         <!-- Required. For publish channel feature -->
-        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。 -->
         <!-- 例如: -->
         <!-- 发到 Google Play 的APK可以设置为 google-play; -->
         <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
@@ -171,33 +170,31 @@
             android:name="JPUSH_CHANNEL"
             android:value="developer-default" />
         <!-- Required. AppKey copied from Portal -->
-        <!--       <meta-data android:name="JPUSH_APPKEY" android:value="您应用的Appkey"/>-->
+        <!-- <meta-data android:name="JPUSH_APPKEY" android:value="您应用的Appkey"/> -->
         <meta-data
             android:name="JPUSH_APPKEY"
             android:value="sadfg" />
-        <!--极光推送 end-->
+        <!-- 极光推送 end -->
 
-        <!--支付宝SDK start-->
+
+        <!-- 支付宝SDK start -->
         <activity
             android:name="com.alipay.sdk.app.H5PayActivity"
             android:configChanges="orientation|keyboardHidden|navigation|screenSize"
             android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
         <activity
             android:name="com.alipay.sdk.app.H5AuthActivity"
             android:configChanges="orientation|keyboardHidden|navigation"
             android:exported="false"
             android:screenOrientation="behind"
-            android:windowSoftInputMode="adjustResize|stateHidden">
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
 
-        </activity>
+        <!-- 支付宝SDK end -->
 
-        <!--支付宝SDK end-->
 
-        <!--微信支付 start-->
+        <!-- 微信支付 start -->
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:exported="true"
@@ -205,16 +202,18 @@
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="sdksample" />
             </intent-filter>
         </activity>
-        <!--微信支付 end-->
+        <!-- 微信支付 end -->
 
         <uses-library
             android:name="org.simalliance.openmobileapi"
@@ -227,14 +226,12 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name="com.unionpay.UPPayWapActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-
-
+        <activity android:name=".mvp.goods.view.BaseGoodsDetailActivity"></activity>
     </application>
 
 </manifest>

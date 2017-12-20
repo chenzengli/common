@@ -1,0 +1,14 @@
+<com.mc.common.view.pulluploadmore.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/interval_16dp"
+    android:scrollbars="none">
+
+    <TextView
+        android:id="@+id/tv_product_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</com.mc.common.view.pulluploadmore.MyScrollView>

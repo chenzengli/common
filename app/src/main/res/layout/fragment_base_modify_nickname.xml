@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_dd"
+        android:paddingBottom="@dimen/interval_6dp"
+        android:paddingLeft="@dimen/interval_16dp"
+        android:paddingRight="@dimen/interval_16dp"
+        android:paddingTop="@dimen/interval_6dp"
+        android:text="@string/modify_nickname"
+        android:textColor="@color/black_333"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <com.mc.common.view.ContainsEmojiEditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/interval_10dp"
+        android:layout_marginTop="@dimen/interval_10dp"
+        android:background="@color/transparent"
+        android:hint="@string/hint_modify_nickname"
+        android:imeOptions="actionDone"
+        android:maxLength="10"
+        android:padding="@dimen/interval_16dp"
+        android:textSize="@dimen/text_size_14sp" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/interval_44dp"
+        android:layout_marginLeft="@dimen/interval_16dp"
+        android:layout_marginRight="@dimen/interval_16dp"
+        android:background="@drawable/bg_login"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+
+</LinearLayout>

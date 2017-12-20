@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/interval_6dp"
+        android:background="@color/white_dd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/interval_10dp"
+        android:paddingLeft="@dimen/interval_16dp"
+        android:paddingRight="@dimen/interval_16dp"
+        android:paddingTop="@dimen/interval_10dp"
+        android:text="@string/invoice_title" />
+
+    <RadioGroup
+        android:id="@+id/rg_invoice_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/interval_16dp"
+        android:paddingRight="@dimen/interval_16dp">
+
+        <RadioButton
+            android:id="@+id/rb_personal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personal"
+            android:textSize="@dimen/sp_14" />
+
+        <RadioButton
+            android:id="@+id/rb_enterprise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterprise"
+            android:textSize="@dimen/sp_14" />
+
+        <RadioButton
+            android:id="@+id/rb_no_need"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_need_invoice"
+            android:textSize="@dimen/sp_14" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/et_invoice_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/interval_16dp"
+        android:layout_marginRight="@dimen/interval_16dp"
+        android:hint="@string/hint_invoice_title" />
+
+    <EditText
+        android:id="@+id/et_invoice_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/interval_16dp"
+        android:layout_marginRight="@dimen/interval_16dp"
+        android:hint="@string/hint_invoice_id" />
+
+    <Button
+        android:id="@+id/btn_enable"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/interval_44dp"
+        android:layout_margin="@dimen/interval_16dp"
+        android:background="@drawable/bg_login"
+        android:text="@string/yes"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16" />
+
+</LinearLayout>
